@@ -1,0 +1,665 @@
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css"
+    />
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/award.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="loader" class="loader">
+      <div class="flex justify-center">
+        <div class="basketball">
+          <img src="./images/ball.png" alt="ball" />
+        </div>
+      </div>
+    </div>
+    <div id="content" style="display: none">
+      <header>
+        <div class="header p-1">
+          <div class="header-top">
+            <div class="md:container">
+              <div class="flex justify-between">
+                <div class="flex gap-2">
+                  <div class="w-[50px] logo animate__animated animate__heartBeat">
+                    <img src="./images/basket.png" alt="logo" width="100%" height="100%" />
+                  </div>
+                  <h1 class="title font-bold md:text-lg p-6 md:p-4 whitespace-nowrap text-xs">
+                    هیئت بسکتبال گرگان
+                  </h1>
+                </div>
+                <div class="">
+                  <ul class="flex gap-8 p-4" id="menu">
+                    <li>
+                      <a href="index.html" class="menu-item font-bold">صفحه اصلی</a>
+                    </li>
+                    <li>
+                      <a href="news.html" class="menu-item">اخبار</a>
+                    </li>
+                    <li>
+                      <a href="detailNews.html" class="menu-item">جزئیات خبر</a>
+                    </li>
+                    <li>
+                      <a href="member.html" class="menu-item">اعضای تیم</a>
+                    </li>
+                    <li class="relative" id="more-wrapper">
+                      <button type="button" class="flex items-center" id="more-button">
+                        بیشتر
+                        <svg height="20px" class="m-1" fill="white" viewBox="0 0 512 512" width="20px" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 " />
+                        </svg>
+                      </button>
+                      <div  class="more absolute left-0 top-full bg-blue shadow-lg z-50 opacity-0 scale-y-95 transform transition-all duration-300 origin-top pointer-events-none" id="moredetail">
+                        <ul class="flex flex-col gap-4 p-4 text-white">
+                          <li class="relative group">
+                            <a href="#" class="block">تیم</a>
+                            <ul class="team-menu absolute -top-4 right-full bg-blue p-4 gap-4 flex flex-col gap-2 min-w-[150px] shadow-lg">
+                              <li><a href="#">تیم گرگان</a></li>
+                              <li><a href="#">تیم گرگان</a></li>
+                              <li><a href="#">تیم گرگان</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="awards.html">جوایز</a></li>
+                          <li><a href="history.html">تاریخچه</a></li>
+                        </ul>
+                        
+                      </div>
+                    </li>
+                  </ul>
+                 
+                </div>
+                <div id="searchBox" class="search animate__animated animate__fadeInDown">
+                  <div class="flex justify-between p-3">
+                    <button type="button" onclick="closeSearchBox()">
+                      <svg aria-labelledby="closeIconTitle" color="#045AB2" fill="none" height="40px" role="img"
+                        stroke="#045AB2" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1"
+                        viewBox="0 0 24 24" width="40px" xmlns="http://www.w3.org/2000/svg">
+                        <title id="closeIconTitle" />
+                        <path
+                          d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575" />
+                      </svg>
+                    </button>
+                    <input type="text" name="" id="" class="border-b p-2 text-black w-[50%]"
+                      placeholder="جستجو کنید..." />
+                    <button type="button" onclick="search()">
+                      <svg aria-labelledby="searchIconTitle" color="#045AB2" fill="none" height="40px" role="img"
+                        stroke="#045AB2" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1"
+                        viewBox="0 0 24 24" width="40px" xmlns="http://www.w3.org/2000/svg">
+                        <title id="searchIconTitle" />
+                        <path d="M14.4121122,14.4121122 L20,20" />
+  
+                        <circle cx="10" cy="10" r="6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex md:gap-2">
+                  <button typ="button" class="flex justify-center p-4" id="showSearch" onclick="toggleSearch()">
+                    <svg height="30px" id="Layer_1" style="enable-background: new 0 0 512 512" version="1.1"
+                      viewBox="0 0 512 512" width="30px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" fill="white">
+                      <path
+                        d="M344.5,298c15-23.6,23.8-51.6,23.8-81.7c0-84.1-68.1-152.3-152.1-152.3C132.1,64,64,132.2,64,216.3  c0,84.1,68.1,152.3,152.1,152.3c30.5,0,58.9-9,82.7-24.4l6.9-4.8L414.3,448l33.7-34.3L339.5,305.1L344.5,298z M301.4,131.2  c22.7,22.7,35.2,52.9,35.2,85c0,32.1-12.5,62.3-35.2,85c-22.7,22.7-52.9,35.2-85,35.2c-32.1,0-62.3-12.5-85-35.2  c-22.7-22.7-35.2-52.9-35.2-85c0-32.1,12.5-62.3,35.2-85c22.7-22.7,52.9-35.2,85-35.2C248.5,96,278.7,108.5,301.4,131.2z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="responseHead" class="flex justify-between relative">
+            <div id="menuResponsive" class="p-4">
+              <button type="button" onclick="toggleMenu()">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px">
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex relative">
+              <div class="w-[50px] logo animate__animated animate__heartBeat">
+                <img src="./images/basket.png" alt="logo" width="100%" height="100%" />
+              </div>
+            </div>
+            <div id="searchBoxResponse" class="search animate__animated animate__fadeInDown">
+              <div class="flex justify-between p-3">
+                <button type="button" onclick="closeSearchBoxResponse()">
+                  <svg aria-labelledby="closeIconTitle" color="#045AB2" fill="none" height="40px" role="img"
+                    stroke="#045AB2" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1" viewBox="0 0 24 24"
+                    width="40px" xmlns="http://www.w3.org/2000/svg">
+                    <title id="closeIconTitle" />
+                    <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575" />
+                  </svg>
+                </button>
+                <input type="text" name="" id="" class="border-b p-2 text-black w-[50%]" placeholder="جستجو کنید..." />
+                <button type="button" onclick="search()">
+                  <svg aria-labelledby="searchIconTitle" color="#045AB2" fill="none" height="40px" role="img"
+                    stroke="#045AB2" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1" viewBox="0 0 24 24"
+                    width="40px" xmlns="http://www.w3.org/2000/svg">
+                    <title id="searchIconTitle" />
+                    <path d="M14.4121122,14.4121122 L20,20" />
+  
+                    <circle cx="10" cy="10" r="6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="flex md:gap-2">
+              <button typ="button" class="flex justify-center p-4" id="showSearch" onclick="toggleSearchResponse()">
+                <svg height="30px" id="Layer_1" style="enable-background: new 0 0 512 512" version="1.1"
+                  viewBox="0 0 512 512" width="30px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" fill="white">
+                  <path
+                    d="M344.5,298c15-23.6,23.8-51.6,23.8-81.7c0-84.1-68.1-152.3-152.1-152.3C132.1,64,64,132.2,64,216.3  c0,84.1,68.1,152.3,152.1,152.3c30.5,0,58.9-9,82.7-24.4l6.9-4.8L414.3,448l33.7-34.3L339.5,305.1L344.5,298z M301.4,131.2  c22.7,22.7,35.2,52.9,35.2,85c0,32.1-12.5,62.3-35.2,85c-22.7,22.7-52.9,35.2-85,35.2c-32.1,0-62.3-12.5-85-35.2  c-22.7-22.7-35.2-52.9-35.2-85c0-32.1,12.5-62.3,35.2-85c22.7-22.7,52.9-35.2,85-35.2C248.5,96,278.7,108.5,301.4,131.2z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="responseMenu" class="toggle-box fixed top-[72px]  w-[100%] bg-[#045AB2]">
+          <ul class="flex flex-col gap-8 p-4">
+            <li>
+              <a href="index.html"> صفحه اصلی </a>
+            </li>
+            <li>
+              <a href="news.html"> اخبار </a>
+            </li>
+            <li>
+              <a href="detailNews.html"> جزییات خبر </a>
+            </li>
+            <li>
+              <a href="member.html"> اعضای تیم </a>
+            </li>
+            <li>
+              <a href="teams.html"> تیم </a>
+            </li>
+            <li>
+              <a href="awards.html"> جوایز </a>
+            </li>
+            <li>
+              <a href="history.html"> تاریخچه </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main>
+        <div class="award lg:container pt-24 p-2">
+          <div class="bg-news flex justify-between p-3" style="border-radius: 4px;">
+            <h3 class="font-bold" style="font-size:22px">
+              افتخارات ما
+            </h3>
+            <button type="button" class="hover-button border hover:bg-white hover:text-orange w-[100px]"
+              style="border-radius: 8px; font-size:13px !important">
+              فصل ها 
+              <img src="./images/ball.png" alt="Ball" class="hover-img w-6 h-6">
+            </button>
+          </div>
+          <div
+            class="rounded-lg bg-blackBack mt-6"
+          >
+            <div class="grid grid-cols-12 gap-6 p-4 md:p-6">
+              <div class="col-span-12 lg:col-span-6">
+                <a href="#">
+                  <h3
+                    class="font-semibold text-2xl mt-4 hover:text-orange"
+                  >
+                    بهترین پاسور در 1398
+                  </h3>
+                  <p
+                    class="text-xs text-justify lg:text-sm mt-4 leading-snug" style="line-height: 25px;"
+                  >
+                    امروزه، اسکای‌لاین نه تنها یک تیم بسکتبال است؛ بلکه نماد
+                    امید و اراده برای ورزشکاران جوان در ایران به شمار می‌آید. با
+                    یک پایگاه هواداری پرشور و تعهد به ارزش‌های اجتماعی،
+                    اسکای‌لاین هدف دارد تا نسل‌های آینده را الهام ببخشد و در عین
+                    حال به دنبال کسب قهرمانی‌های بیشتر و افزایش تأثیر خود در
+                    دنیای ورزش باشد.
+                  </p>
+                </a>
+              </div>
+              <div class="col-span-12 lg:col-span-6" >
+                <a href="#">
+                  <img
+                    src="./images/awards.png"
+                    alt="bbasketbal"
+                    width="100%"
+                    height="100%"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-lg bg-blackBack mt-6" >
+            <div class="grid grid-cols-12 gap-6 p-6">
+              <div class="col-span-12 lg:col-span-6">
+                <a href="#">
+                  <img
+                    src="./images/awards.png"
+                    alt="bbasketbal"
+                    width="100%"
+                    height="100%"
+                  />
+                </a>
+              </div>
+              <div class="col-span-12 lg:col-span-6">
+                <a href="#">
+                  <h3
+                    class="font-semibold text-2xl mt-4 hover:text-orange"
+                  >
+                    بهترین پاسور در 1398
+                  </h3>
+                  <p
+                    class="text-xs text-justify lg:text-sm mt-4 leading-snug" style="line-height: 25px;"
+                  >
+                    امروزه، اسکای‌لاین نه تنها یک تیم بسکتبال است؛ بلکه نماد
+                    امید و اراده برای ورزشکاران جوان در ایران به شمار می‌آید. با
+                    یک پایگاه هواداری پرشور و تعهد به ارزش‌های اجتماعی،
+                    اسکای‌لاین هدف دارد تا نسل‌های آینده را الهام ببخشد و در عین
+                    حال به دنبال کسب قهرمانی‌های بیشتر و افزایش تأثیر خود در
+                    دنیای ورزش باشد.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-lg bg-blackBack mt-6"
+          >
+            <div class="grid grid-cols-12 gap-6 p-6">
+              <div class="col-span-12 lg:col-span-6">
+                <a href="#">
+                  <h3
+                    class="font-semibold text-2xl mt-4 hover:text-orange"
+                  >
+                    بهترین پاسور در 1398
+                  </h3>
+                  <p
+                    class="text-xs text-justify lg:text-sm mt-4 leading-snug" style="line-height: 25px;"
+                  >
+                    امروزه، اسکای‌لاین نه تنها یک تیم بسکتبال است؛ بلکه نماد
+                    امید و اراده برای ورزشکاران جوان در ایران به شمار می‌آید. با
+                    یک پایگاه هواداری پرشور و تعهد به ارزش‌های اجتماعی،
+                    اسکای‌لاین هدف دارد تا نسل‌های آینده را الهام ببخشد و در عین
+                    حال به دنبال کسب قهرمانی‌های بیشتر و افزایش تأثیر خود در
+                    دنیای ورزش باشد.
+                  </p>
+                </a>
+              </div>
+              <div
+                class="col-span-12 lg:col-span-6"
+              >
+                <a href="#">
+                  <img
+                    src="./images/awards.png"
+                    alt="bbasketbal"
+                    width="100%"
+                    height="100%"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-news flex justify-between p-1 lg:p-3" style="border-radius: 4px;">
+            <h3 class="font-bold" style="font-size:22px">
+              دستاوردها
+            </h3>
+          </div>
+          <div class="grid grid-cols-12 gap-6 mt-6">
+            <div class="col-span-12 lg:col-span-6">
+              <div class="flex flex-col gap-4">
+                <div
+                class="bg-blackBack rounded-lg p-6"
+              >
+                <a href="#">
+                  <div
+                    class="achievement"
+                  >
+                    <span class="hover:text-orange" style="font-size: 16px; line-height: 25px;">نخستین حضور در پلی‌آف: نخستین حضور خود را در پلی‌آف در
+                      سال ۱۳۸۰ تجربه کردند و زمینه‌ساز موفقیت‌های آینده
+                      شدند.</span
+                    >
+                  </div>
+                </a>
+              </div>
+              <div
+              class="bg-blackBack rounded-lg p-6"
+            >
+              <a href="#">
+                <div
+                  class="achievement"
+                >
+                  <span class="hover:text-orange" style="font-size: 16px; line-height: 25px;">نخستین حضور در پلی‌آف: نخستین حضور خود را در پلی‌آف در
+                    سال ۱۳۸۰ تجربه کردند و زمینه‌ساز موفقیت‌های آینده
+                    شدند.</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div
+            class="bg-blackBack rounded-lg p-6"
+          >
+            <a href="#">
+              <div
+                class="achievement"
+              >
+                <span class="hover:text-orange" style="font-size: 16px; line-height: 25px;">نخستین حضور در پلی‌آف: نخستین حضور خود را در پلی‌آف در
+                  سال ۱۳۸۰ تجربه کردند و زمینه‌ساز موفقیت‌های آینده
+                  شدند.</span
+                >
+              </div>
+            </a>
+          </div>
+              </div>  
+            </div>
+            <div class="col-span-12 lg:col-span-6">
+              <div class="flex flex-col gap-4">
+                <div
+                class="bg-blackBack rounded-lg p-6"
+              >
+                <a href="#">
+                  <div
+                    class="achievement"
+                  >
+                    <span class="hover:text-orange" style="font-size: 16px; line-height: 25px;">نخستین حضور در پلی‌آف: نخستین حضور خود را در پلی‌آف در
+                      سال ۱۳۸۰ تجربه کردند و زمینه‌ساز موفقیت‌های آینده
+                      شدند.</span
+                    >
+                  </div>
+                </a>
+              </div>
+              <div
+              class="bg-blackBack rounded-lg p-6"
+            >
+              <a href="#">
+                <div
+                  class="achievement"
+                >
+                  <span class="hover:text-orange" style="font-size: 16px; line-height: 25px;">نخستین حضور در پلی‌آف: نخستین حضور خود را در پلی‌آف در
+                    سال ۱۳۸۰ تجربه کردند و زمینه‌ساز موفقیت‌های آینده
+                    شدند.</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div
+            class="bg-blackBack rounded-lg p-6"
+          >
+            <a href="#">
+              <div
+                class="achievement"
+              >
+                <span class="hover:text-orange" style="font-size: 16px; line-height: 25px;">نخستین حضور در پلی‌آف: نخستین حضور خود را در پلی‌آف در
+                  سال ۱۳۸۰ تجربه کردند و زمینه‌ساز موفقیت‌های آینده
+                  شدند.</span
+                >
+              </div>
+            </a>
+          </div>
+              </div>  
+            </div>
+           
+          </div>
+          <div class="bg-news flex justify-between mt-6 p-1 lg:p-3" style="border-radius: 4px;">
+            <h3 class="font-bold" style="font-size:22px">
+            جوایز 
+            </h3>
+          </div>
+          <swiper-container class="" init="false">
+            <swiper-slide>
+              <div class="bg-blackBack" style="border-radius: 16px;">
+                <a href="/detailNews" class="flex flex-col gap-2 p-4">
+                  <img
+                    src="./images/award.png"
+                    alt="detail"
+                    class="hover:opacity-[0.5]"
+                  />
+                  <span
+                    class="subTitle text-white text-sm lg:text-lg font-bold mt-3 hover:text-orange"
+                  >
+                    بهترین پاسور
+                  </span>
+                </a>
+              </div>
+             
+            </swiper-slide>
+            <swiper-slide>
+              <div class="bg-blackBack" style="border-radius: 16px;">
+                <a href="/detailNews" class="flex flex-col gap-2 p-4">
+                  <img
+                    src="./images/award.png"
+                    alt="detail"
+                    class="hover:opacity-[0.5]"
+                  />
+                  <span
+                    class="subTitle text-white text-sm lg:text-lg font-bold mt-3 hover:text-orange"
+                  >
+                    بهترین پاسور
+                  </span>
+                </a>
+              </div>
+             
+            </swiper-slide>
+            <swiper-slide>
+              <div class="bg-blackBack" style="border-radius: 16px;">
+                <a href="/detailNews" class="flex flex-col gap-2 p-4">
+                  <img
+                    src="./images/award.png"
+                    alt="detail"
+                    class="hover:opacity-[0.5]"
+                  />
+                  <span
+                    class="subTitle text-white text-sm lg:text-lg font-bold mt-3 hover:text-orange"
+                  >
+                    بهترین پاسور
+                  </span>
+                </a>
+              </div>
+             
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </main>
+      <footer>
+        <div class="footer mt-6 p-2 ">
+          <div class="lg:container">
+            <div class="border-b mt-3">
+              <div class="flex gap-2 ">
+                <div class="w-[50px] logo">
+                  <img src="./images/basket.png" alt="logo" width="100%" height="100%" />
+                </div>
+                <h2 class="text-lg font-bold p-2 whitespace-nowrap">
+                  هیئت بسکتبال گرگان
+                </h2>
+              </div>
+              <div class="grid grid-cols-12  pb-6">
+                <div class="col-span-12 md:col-span-5 lg:mt-4">
+                  <div class="flex flex-col-reverse justify-center gap-3 md:flex md:flex-row md:gap-16  mt-6" style="align-items:center;">
+                    <div class="">
+                      <h3>فضای مجازی</h3>
+                      <div class="flex whitespace-wrap">
+                        <div class="flex flex-row md:flex md:flex-col gap-3 mt-4 lg:mt-2">
+                          <div class="flex gap-3">
+                            <a href="#">
+                              <svg height="24" id="Layer_1" style="enable-background: new 0 0 56.6934 56.6934"
+                                version="1.1" viewBox="0 0 56.6934 56.6934" width="24" xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g>
+                                  <path
+                                    d="M29.7518,16.1734c-6.7766,0-12.2879,5.5108-12.2905,12.2844c-0.001,2.3214,0.6486,4.5821,1.8783,6.5381l0.2922,0.4648   l-1.2411,4.5334l4.6498-1.2197l0.4485,0.2662c1.8863,1.1193,4.0485,1.7116,6.2529,1.7125h0.005   c6.7715,0,12.2826-5.5113,12.2853-12.2855c0.0013-3.2826-1.2754-6.3693-3.5948-8.6915   C36.1179,17.4541,33.0332,16.1744,29.7518,16.1734z M36.9781,33.7399c-0.3077,0.8626-1.7833,1.65-2.4929,1.756   c-0.6364,0.0952-1.4415,0.1348-2.3262-0.1463c-0.5364-0.1702-1.2243-0.3975-2.1055-0.778   c-3.7049-1.5998-6.1246-5.3301-6.3092-5.5767c-0.1846-0.2464-1.5081-2.0026-1.5081-3.8206c0-1.8177,0.9542-2.7113,1.2927-3.0811   c0.3384-0.3696,0.7386-0.4621,0.9848-0.4621c0.2462,0,0.4927,0.0023,0.7078,0.013c0.2267,0.0115,0.5312-0.0861,0.8311,0.634   c0.3077,0.7396,1.0463,2.5575,1.1387,2.7424c0.0924,0.1848,0.1539,0.4005,0.0308,0.647c-0.1231,0.2463-0.1846,0.4005-0.3693,0.6161   c-0.1846,0.2157-0.3879,0.4815-0.554,0.647c-0.1849,0.1842-0.3774,0.3841-0.162,0.7537c0.2155,0.3699,0.9567,1.5792,2.0547,2.5586   c1.4106,1.2582,2.6007,1.6482,2.97,1.8331c0.3693,0.185,0.5848,0.1539,0.8002-0.0924c0.2155-0.2465,0.9233-1.0785,1.1695-1.4482   c0.2462-0.3696,0.4924-0.308,0.8309-0.1848c0.3385,0.1234,2.1544,1.0167,2.5237,1.2015c0.3693,0.1849,0.6155,0.2774,0.7078,0.4315   C37.2859,32.1375,37.2859,32.877,36.9781,33.7399z" />
+                                  <path
+                                    d="M29.2066,4.3736c-13.5996,0-24.625,11.0234-24.625,24.623s11.0254,24.625,24.625,24.625   c13.5986,0,24.624-11.0254,24.624-24.625S42.8052,4.3736,29.2066,4.3736z M29.747,43.2496   C29.7465,43.2496,29.7473,43.2496,29.747,43.2496h-0.0061c-2.4738-0.0009-4.9047-0.6216-7.0635-1.7991l-7.8357,2.0554l2.097-7.6594   c-1.2935-2.2416-1.9741-4.7843-1.973-7.3895c0.0032-8.1496,6.6341-14.78,14.7812-14.78c3.954,0.0016,7.6653,1.5409,10.4559,4.3348   c2.7907,2.7938,4.3268,6.5074,4.3253,10.457C44.5246,36.6185,37.8933,43.2496,29.747,43.2496z" />
+                                </g>
+                              </svg>
+                            </a>
+                            <a href="#">
+                              <svg height="24" style="
+                                    fill-rule: evenodd;
+                                    clip-rule: evenodd;
+                                    stroke-linejoin: round;
+                                    stroke-miterlimit: 2;
+                                  " version="1.1" viewBox="0 0 512 512" width="24" xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path
+                                  d="M256,0c141.29,0 256,114.71 256,256c0,141.29 -114.71,256 -256,256c-141.29,0 -256,-114.71 -256,-256c0,-141.29 114.71,-256 256,-256Zm-80.037,399.871l0,-199.921l-66.464,0l0,199.921l66.464,0Zm239.62,0l0,-114.646c0,-61.409 -32.787,-89.976 -76.509,-89.976c-35.255,0 -51.047,19.389 -59.889,33.007l0,-28.306l-66.447,0c0.881,18.757 0,199.921 0,199.921l66.446,0l0,-111.65c0,-5.976 0.43,-11.95 2.191,-16.221c4.795,-11.935 15.737,-24.299 34.095,-24.299c24.034,0 33.663,18.34 33.663,45.204l0,106.966l66.45,0Zm-272.403,-296.321c-22.74,0 -37.597,14.95 -37.597,34.545c0,19.182 14.405,34.544 36.717,34.544l0.429,0c23.175,0 37.6,-15.362 37.6,-34.544c-0.43,-19.595 -14.424,-34.545 -37.149,-34.545Z" />
+                              </svg>
+                            </a>
+                            <a href="#">
+                              <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512" width="24" height="24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title />
+                                <path
+                                  d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM389.059,161.936,343.591,379a16.007,16.007,0,0,1-25.177,9.593l-66.136-48.861-40.068,37.8a5.429,5.429,0,0,1-7.74-.294l-.861-.946,6.962-67.375L336.055,194.266a3.358,3.358,0,0,0-4.061-5.317L171.515,290.519,102.4,267.307a9.393,9.393,0,0,1-.32-17.694L372.5,147.744A12.441,12.441,0,0,1,389.059,161.936Z" />
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="flex gap-3">
+                            <a href="#">
+                              <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512" width="24" height="24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title />
+                                <path
+                                  d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM389.059,161.936,343.591,379a16.007,16.007,0,0,1-25.177,9.593l-66.136-48.861-40.068,37.8a5.429,5.429,0,0,1-7.74-.294l-.861-.946,6.962-67.375L336.055,194.266a3.358,3.358,0,0,0-4.061-5.317L171.515,290.519,102.4,267.307a9.393,9.393,0,0,1-.32-17.694L372.5,147.744A12.441,12.441,0,0,1,389.059,161.936Z" />
+                              </svg>
+                            </a>
+                            <a href="#">
+                              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                                <g>
+                                  <path d="M0 0h24v24H0z" fill="none" />
+                                  <path
+                                    d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"
+                                    fill-rule="nonzero" />
+                                </g>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col sm:w-[50%] w-[100%]">
+                      <button type="button" class="border-b flex justify-between p-2">
+                        تصاویر
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                          <title />
+                          <g data-name="Layer 2" id="Layer_2">
+                            <path
+                              d="M10.1,23a1,1,0,0,0,0-1.41L5.5,17H29.05a1,1,0,0,0,0-2H5.53l4.57-4.57A1,1,0,0,0,8.68,9L2.32,15.37a.9.9,0,0,0,0,1.27L8.68,23A1,1,0,0,0,10.1,23Z" />
+                          </g>
+                        </svg>
+                      </button>
+                      <button type="button" class="border-b flex justify-between p-2">
+                        ویدیو ها
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                          <title />
+                          <g data-name="Layer 2" id="Layer_2">
+                            <path
+                              d="M10.1,23a1,1,0,0,0,0-1.41L5.5,17H29.05a1,1,0,0,0,0-2H5.53l4.57-4.57A1,1,0,0,0,8.68,9L2.32,15.37a.9.9,0,0,0,0,1.27L8.68,23A1,1,0,0,0,10.1,23Z" />
+                          </g>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-2"></div>
+                <div class="col-span-12 md:col-span-5 mt-[5%]">
+                  <div class="flex justify-around">
+                    <ul>
+                      <li>
+                        <a href="#"> سیاست حریم خصوصی </a>
+                      </li>
+                      <li>
+                        <a href="#"> شرایط و ضوابط </a>
+                      </li>
+                      <li>
+                        <a href="#"> کوکی ها </a>
+                      </li>
+                      <li>
+                        <a href="#"> سوالات متداول </a>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <a href="#"> اخبار </a>
+                      </li>
+                      <li>
+                        <a href="#"> چارت سازمانی </a>
+                      </li>
+                      <li>
+                        <a href="#"> تاریخچه </a>
+                      </li>
+                      <li>
+                        <a href="#"> افتخارات </a>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <a href="#"> درباره ما </a>
+                      </li>
+                      <li>
+                        <a href="#"> تماس با ما </a>
+                      </li>
+                      <li>
+                        <a href="#"> کادر فنی و اعضای تیم </a>
+                      </li>
+                      <li>
+                        <a href="#"> سیاست حریم خصوصی </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <span class="text-xs">همه حقوق کپی رایت متعلق به هیئت بسکتبال گرگان</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/scrollreveal.min.js"></script>
+    <script src="./js/award.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+       const swiperEl = document.querySelector('swiper-container')
+    Object.assign(swiperEl, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    });
+    swiperEl.initialize();
+    </script>
+  </body>
+</html>

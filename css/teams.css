@@ -1,0 +1,38 @@
+.teamTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+}
+.teamTitle p{
+    text-align: justify;
+}
+.imgTeam{
+    opacity: 0.5;
+}
+.teams .descript-img{
+    text-align: justify;
+}
+
+@media (max-width:1024px) {
+    .teamTitle{
+        padding: 0;
+    }
+    .teams .descript-img{
+        font-size: 16px !important;
+        text-align: center;
+    }
+    .teamTitle span{
+        font-size: 26px;
+    }
+}
+@media (max-width:768px) {
+    .teams .descript-img{
+        line-height:22px !important;
+        font-size: 15px !important;
+    }
+    .teamTitle span{
+        font-size: 26px;
+    }
+}

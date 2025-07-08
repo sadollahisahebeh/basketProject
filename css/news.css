@@ -1,0 +1,8 @@
+.sidebar{
+    background-image: url('../images/back2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.btn-paused{
+    display:none;
+}

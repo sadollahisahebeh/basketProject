@@ -1,0 +1,447 @@
+
+@font-face {
+	font-family: kalameh;
+	font-style: normal;
+	font-weight: 100;
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-Thin.eot');
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-Thin.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/kalameh/woff2/KalamehWeb\(FaNum\)-Thin.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/ttf/Kalameh\(FaNum\)-Thin.ttf') format('ttf'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/woff/KalamehWeb\(FaNum\)-Thin.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: kalameh;
+	font-style: normal;
+	font-weight: 200;
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-ExtraLight.eot');
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-ExtraLight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/kalameh/woff2/KalamehWeb\(FaNum\)-ExtraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/ttf/Kalameh\(FaNum\)-ExtraLight.ttf') format('ttf'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/woff/KalamehWeb\(FaNum\)-ExtraLight.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: kalameh;
+	font-style: normal;
+	font-weight: 300;
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-Light.eot');
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/kalameh/woff2/KalamehWeb\(FaNum\)-Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/ttf/Kalameh\(FaNum\)-Light.ttf') format('ttf'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/woff/KalamehWeb\(FaNum\)-Light.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: kalameh;
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-Medium.eot');
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-Medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/kalameh/woff2/KalamehWeb\(FaNum\)-Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/ttf/Kalameh\(FaNum\)-Medium.ttf') format('ttf'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/woff/KalamehWeb\(FaNum\)-Medium.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: kalameh;
+	font-style: normal;
+	font-weight: 600;
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-SemiBold.eot');
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-SemiBold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/kalameh/woff2/KalamehWeb\(FaNum\)-SemiBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/ttf/Kalameh\(FaNum\)-SemiBold.ttf') format('ttf'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/woff/KalamehWeb\(FaNum\)-SemiBold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: kalameh;
+	font-style: normal;
+	font-weight: 750;
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-ExtraBold.eot');
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-ExtraBold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/kalameh/woff2/KalamehWeb\(FaNum\)-ExtraBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/ttf/Kalameh\(FaNum\)-ExtraBold.ttf') format('ttf'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/woff/KalamehWeb\(FaNum\)-ExtraBold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: kalameh;
+	font-style: normal;
+	font-weight: 800;
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-SemiBold.eot');
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-SemiBold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/kalameh/woff2/KalamehWeb\(FaNum\)-SemiBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/ttf/Kalameh\(FaNum\)-SemiBold.ttf') format('ttf'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/woff/KalamehWeb\(FaNum\)-SemiBold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: kalameh;
+	font-style: normal;
+	font-weight: 850;
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-Black.eot');
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-Black.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/kalameh/woff2/KalamehWeb\(FaNum\)-Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/ttf/Kalameh\(FaNum\)-Black.ttf') format('ttf'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/woff/KalamehWeb\(FaNum\)-Black.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: kalameh;
+	font-style: normal;
+	font-weight: bold;
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-Bold.eot');
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/kalameh/woff2/KalamehWeb\(FaNum\)-Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/ttf/Kalameh\(FaNum\)-Bold.ttf') format('ttf'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/woff/KalamehWeb\(FaNum\)-Bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: kalameh;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-Regular.eot');
+	src: url('../font/kalameh/eot/KalamehWeb\(FaNum\)-Regular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/kalameh/woff2/KalamehWeb\(FaNum\)-Regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/ttf/Kalameh\(FaNum\)-Regular.ttf') format('ttf'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/kalameh/woff/KalamehWeb\(FaNum\)-Regular.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+* {
+    font-family: 'Kalameh';
+    color: white;
+}
+  #menu li{
+    font-size: 18px !important;
+  }
+ .team-news{
+    border-radius: 12px;
+    padding: 1%;
+ }
+ .banner-text{
+    font-weight: normal;
+    transition: all 0.3 ease;
+ }
+ .banner-text.active{
+    opacity: 1;
+    font-weight: bold;
+ }
+
+
+
+input {
+    outline: none;
+    color: black !important
+}
+
+body {
+    background-color: black;
+
+}
+
+svg {
+    fill: white;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+    background-color: #045AB2;
+    border: 1px solid #045AB2;
+}
+.text-Blue{
+    color:#045AB2;
+    border: 1px solid #045AB2;
+}
+
+.more {
+    width: 140px;
+    left: -70px !important;
+}
+.team-menu {
+  display: none !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.group:hover .team-menu {
+  display: flex !important;
+  flex-direction: column;
+  gap: 16px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.bg-news {
+    background-image: url('../images/newstitle.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+.toggle-box {
+    overflow: hidden;
+    transition: max-width 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+    max-width: 0;
+    opacity: 0;
+    transform: scaleX(0.95);
+  }
+  
+  .toggle-box.show {
+    max-width: 100%; 
+    opacity: 1;
+    transform: scaleX(1);
+  }
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    /* width: 100%;
+    height: 100%; */
+    /* object-fit: cover; */
+}
+
+.swiper-rtl .swiper-button-prev {
+    color: red !important
+}
+
+/* .bg-blackback img{
+   width:100% !important;
+   height: 100% !important;
+  } */
+
+.footer {
+    background-image: url('../images/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#searchBox {
+    display: none;
+}
+#searchBoxResponse {
+    display: none;
+}
+
+.search {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.banner-text{
+    display: block !important;
+}
+
+.txt-banner2 {
+    display: block !important;
+}
+
+.cls-1 {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+}
+.swiper-button-prev svg{
+    color:red !important
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 12px;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+a:hover {
+    color: #ff6500;
+}
+
+.social img {
+    width: 10%;
+    height: 10%;
+}
+
+.loader {
+    background-color: rgba(43, 40, 40, 0.8);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+} */
+
+/* .line-head{
+    animation: fadeIn;
+    animation-duration: 2s;
+} */
+
+.basketball {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    animation: spin 2s linear infinite;
+}
+
+.aos-init {
+    overflow-x: hidden;
+}
+
+.aos-animate {
+    overflow: visible;
+}
+
+
+.new-news .swiper-wrapper {
+    height: 370px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.hover-button {
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+    font-size: 14px !important;
+    font-weight: 600;
+}
+
+.hover-img {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.hover-button:hover .hover-img {
+    animation: moveBall 1.2s ease-in-out forwards;
+}
+
+@keyframes moveBall {
+    0% {
+        left: -40px;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    50% {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 120%;
+        opacity: 0;
+    }
+}
+.font-bold{
+    font-weight: bold;
+}
+.font{
+    opacity: 1 !important;
+}
+@media (min-width:1024px) {
+    .new-news .swiper-wrapper {
+        height: auto !important;
+    }
+}
+
+
+@media (max-width:1024px) {
+    img{
+        height: auto !important;
+    }
+    .banner-text {
+        display: none !important;
+    }
+    #menuResponsive {
+        display: block;
+    }
+
+    #responseMenu {
+        z-index: 50;
+    }
+
+    .footer ul li:nth-child(1) {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .new-news .swiper-wrapper {
+        height: auto !important;
+    }
+
+}
+
+@media (max-width:768px) {
+    .footer li a {
+        white-space: pre-wrap !important;
+    }
+
+    .basketball {
+        width: 50px;
+        height: 50px;
+        top: 40%
+    }
+    .hover-button{
+        font-size: 12px !important;
+    }
+    .txt-banner2 {
+        display: none !important;
+    }
+
+
+}
